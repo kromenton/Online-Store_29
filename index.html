@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <button id="my-orders-button">My orders</button>
+            <ul id="categories">
+                <li data-category="electronics">Electronics</li>
+                <li data-category="clothing">Clothing</li>
+                <li data-category="books">Books</li>
+            </ul>
+        </div>
+        <div class="middle">
+            <ul id="products">
+            </ul>
+        </div>
+        <div class="right">
+            <div id="product-info">
+            </div>
+            <div id="order-form" style="display: none;">
+                <h2>Order Form</h2>
+                <form id="order-form-content">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" placeholder="Enter your full name" required><br>
+                    <label for="city">City:</label>
+                    <select id="city" required>
+                        <option value="" disabled selected>Select City</option>
+                        <option value="Kyiv">Kyiv</option>
+                        <option value="Lviv">Lviv</option>
+                        <option value="Kharkiv">Kharkiv</option>
+                    </select><br>
+                    <label for="delivery-address">NovaPost №:</label>
+                    <input type="text" id="delivery-address" placeholder="Enter your delivery address" required><br>
+                    <input type="radio" id="cash-on-delivery" name="payment" value="cash" required>
+                    <label for="cash-on-delivery">Cash on Delivery</label>
+                    <input type="radio" id="credit-card" name="payment" value="card" required>
+                    <label for="credit-card">Credit Card</label><br>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" placeholder="Enter quantity" min="1" required><br>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" placeholder="Enter your comment"></textarea><br>
+                    <button type="submit" id="confirm-order">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="orders" style="display: none;">
+        <h2>Мои заказы</h2>
+        <ul id="orders-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
